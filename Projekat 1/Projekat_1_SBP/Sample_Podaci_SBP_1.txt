@@ -1,0 +1,399 @@
+Zgrada:
+
+INSERT INTO Zgrada (ID, Adresa) VALUES (1, '123 Main Street, New York');
+INSERT INTO Zgrada (ID, Adresa) VALUES (2, '456 Elm Street, Los Angeles');
+INSERT INTO Zgrada (ID, Adresa) VALUES (3, '789 Oak Street, Chicago');
+INSERT INTO Zgrada (ID, Adresa) VALUES (4, '101 Pine Street, San Francisco');
+INSERT INTO Zgrada (ID, Adresa) VALUES (5, '202 Maple Avenue, Boston');
+INSERT INTO Zgrada (ID, Adresa) VALUES (6, '303 Cedar Lane, Seattle');
+INSERT INTO Zgrada (ID, Adresa) VALUES (7, '404 Walnut Drive, Miami');
+INSERT INTO Zgrada (ID, Adresa) VALUES (8, '505 Birch Road, Houston');
+INSERT INTO Zgrada (ID, Adresa) VALUES (9, '606 Spruce Boulevard, Dallas');
+INSERT INTO Zgrada (ID, Adresa) VALUES (10, '707 Pineapple Street, Honolulu');
+INSERT INTO Zgrada (ID, Adresa) VALUES (11, '808 Peach Avenue, Atlanta');
+INSERT INTO Zgrada (ID, Adresa) VALUES (12, '909 Lemon Lane, Phoenix');
+INSERT INTO Zgrada (ID, Adresa) VALUES (13, '111 Cherry Court, Philadelphia');
+INSERT INTO Zgrada (ID, Adresa) VALUES (14, '222 Grapevine Lane, Denver');
+INSERT INTO Zgrada (ID, Adresa) VALUES (15, '333 Plum Road, Detroit');
+INSERT INTO Zgrada (ID, Adresa) VALUES (16, '444 Apple Avenue, Minneapolis');
+INSERT INTO Zgrada (ID, Adresa) VALUES (17, '555 Banana Boulevard, Orlando');
+INSERT INTO Zgrada (ID, Adresa) VALUES (18, '666 Mango Drive, San Diego');
+INSERT INTO Zgrada (ID, Adresa) VALUES (19, '777 Papaya Place, Austin');
+INSERT INTO Zgrada (ID, Adresa) VALUES (20, '888 Strawberry Street, Nashville');
+
+
+Ugovor:
+
+INSERT INTO Ugovor (Sifra, DatPotpisa, PeriodVazenja, IDZgrade) VALUES (1, TO_DATE('2024-01-15', 'YYYY-MM-DD'), 2, 5);
+INSERT INTO Ugovor (Sifra, DatPotpisa, PeriodVazenja, IDZgrade) VALUES (2, TO_DATE('2024-02-20', 'YYYY-MM-DD'), 1, 8);
+INSERT INTO Ugovor (Sifra, DatPotpisa, PeriodVazenja, IDZgrade) VALUES (3, TO_DATE('2024-03-10', 'YYYY-MM-DD'), 3, 2);
+INSERT INTO Ugovor (Sifra, DatPotpisa, PeriodVazenja, IDZgrade) VALUES (4, TO_DATE('2024-04-05', 'YYYY-MM-DD'), 1, 10);
+INSERT INTO Ugovor (Sifra, DatPotpisa, PeriodVazenja, IDZgrade) VALUES (5, TO_DATE('2024-02-15', 'YYYY-MM-DD'), 2, 17);
+INSERT INTO Ugovor (Sifra, DatPotpisa, PeriodVazenja, IDZgrade) VALUES (6, TO_DATE('2024-01-25', 'YYYY-MM-DD'), 3, 11);
+INSERT INTO Ugovor (Sifra, DatPotpisa, PeriodVazenja, IDZgrade) VALUES (7, TO_DATE('2024-03-01', 'YYYY-MM-DD'), 1, 14);
+INSERT INTO Ugovor (Sifra, DatPotpisa, PeriodVazenja, IDZgrade) VALUES (8, TO_DATE('2024-02-10', 'YYYY-MM-DD'), 2, 19);
+INSERT INTO Ugovor (Sifra, DatPotpisa, PeriodVazenja, IDZgrade) VALUES (9, TO_DATE('2024-01-20', 'YYYY-MM-DD'), 3, 4);
+INSERT INTO Ugovor (Sifra, DatPotpisa, PeriodVazenja, IDZgrade) VALUES (10, TO_DATE('2024-03-05', 'YYYY-MM-DD'), 1, 9);
+INSERT INTO Ugovor (Sifra, DatPotpisa, PeriodVazenja, IDZgrade) VALUES (11, TO_DATE('2024-04-01', 'YYYY-MM-DD'), 2, 6);
+INSERT INTO Ugovor (Sifra, DatPotpisa, PeriodVazenja, IDZgrade) VALUES (12, TO_DATE('2024-02-20', 'YYYY-MM-DD'), 3, 20);
+INSERT INTO Ugovor (Sifra, DatPotpisa, PeriodVazenja, IDZgrade) VALUES (13, TO_DATE('2024-01-10', 'YYYY-MM-DD'), 1, 15);
+INSERT INTO Ugovor (Sifra, DatPotpisa, PeriodVazenja, IDZgrade) VALUES (14, TO_DATE('2024-03-15', 'YYYY-MM-DD'), 2, 3);
+INSERT INTO Ugovor (Sifra, DatPotpisa, PeriodVazenja, IDZgrade) VALUES (15, TO_DATE('2024-04-05', 'YYYY-MM-DD'), 3, 18);
+INSERT INTO Ugovor (Sifra, DatPotpisa, PeriodVazenja, IDZgrade) VALUES (16, TO_DATE('2024-02-25', 'YYYY-MM-DD'), 1, 13);
+INSERT INTO Ugovor (Sifra, DatPotpisa, PeriodVazenja, IDZgrade) VALUES (17, TO_DATE('2024-01-05', 'YYYY-MM-DD'), 2, 12);
+INSERT INTO Ugovor (Sifra, DatPotpisa, PeriodVazenja, IDZgrade) VALUES (18, TO_DATE('2024-03-20', 'YYYY-MM-DD'), 3, 7);
+INSERT INTO Ugovor (Sifra, DatPotpisa, PeriodVazenja, IDZgrade) VALUES (19, TO_DATE('2024-04-10', 'YYYY-MM-DD'), 1, 1);
+INSERT INTO Ugovor (Sifra, DatPotpisa, PeriodVazenja, IDZgrade) VALUES (20, TO_DATE('2024-01-30', 'YYYY-MM-DD'), 2, 16);
+
+
+Ulaz:
+
+INSERT INTO Ulaz (RBroj, Kamera, RadnoVreme, IDZgrade) VALUES (1, 'Y', INTERVAL '08:00:00' HOUR TO SECOND, 5);
+INSERT INTO Ulaz (RBroj, Kamera, RadnoVreme, IDZgrade) VALUES (2, 'N', INTERVAL '09:30:00' HOUR TO SECOND, 8);
+INSERT INTO Ulaz (RBroj, Kamera, RadnoVreme, IDZgrade) VALUES (3, 'Y', INTERVAL '07:45:00' HOUR TO SECOND, 2);
+INSERT INTO Ulaz (RBroj, Kamera, RadnoVreme, IDZgrade) VALUES (4, 'N', INTERVAL '10:15:00' HOUR TO SECOND, 10);
+INSERT INTO Ulaz (RBroj, Kamera, RadnoVreme, IDZgrade) VALUES (5, 'Y', INTERVAL '11:00:00' HOUR TO SECOND, 17);
+INSERT INTO Ulaz (RBroj, Kamera, RadnoVreme, IDZgrade) VALUES (6, 'N', INTERVAL '09:45:00' HOUR TO SECOND, 11);
+INSERT INTO Ulaz (RBroj, Kamera, RadnoVreme, IDZgrade) VALUES (7, 'Y', INTERVAL '08:30:00' HOUR TO SECOND, 14);
+INSERT INTO Ulaz (RBroj, Kamera, RadnoVreme, IDZgrade) VALUES (8, 'N', INTERVAL '10:00:00' HOUR TO SECOND, 19);
+INSERT INTO Ulaz (RBroj, Kamera, RadnoVreme, IDZgrade) VALUES (9, 'Y', INTERVAL '12:00:00' HOUR TO SECOND, 4);
+INSERT INTO Ulaz (RBroj, Kamera, RadnoVreme, IDZgrade) VALUES (10, 'N', INTERVAL '09:15:00' HOUR TO SECOND, 9);
+INSERT INTO Ulaz (RBroj, Kamera, RadnoVreme, IDZgrade) VALUES (11, 'Y', INTERVAL '08:15:00' HOUR TO SECOND, 6);
+INSERT INTO Ulaz (RBroj, Kamera, RadnoVreme, IDZgrade) VALUES (12, 'N', INTERVAL '10:30:00' HOUR TO SECOND, 20);
+INSERT INTO Ulaz (RBroj, Kamera, RadnoVreme, IDZgrade) VALUES (13, 'Y', INTERVAL '07:30:00' HOUR TO SECOND, 15);
+INSERT INTO Ulaz (RBroj, Kamera, RadnoVreme, IDZgrade) VALUES (14, 'N', INTERVAL '11:45:00' HOUR TO SECOND, 3);
+INSERT INTO Ulaz (RBroj, Kamera, RadnoVreme, IDZgrade) VALUES (15, 'Y', INTERVAL '08:45:00' HOUR TO SECOND, 18);
+INSERT INTO Ulaz (RBroj, Kamera, RadnoVreme, IDZgrade) VALUES (16, 'N', INTERVAL '10:45:00' HOUR TO SECOND, 13);
+INSERT INTO Ulaz (RBroj, Kamera, RadnoVreme, IDZgrade) VALUES (17, 'Y', INTERVAL '07:15:00' HOUR TO SECOND, 12);
+INSERT INTO Ulaz (RBroj, Kamera, RadnoVreme, IDZgrade) VALUES (18, 'N', INTERVAL '11:30:00' HOUR TO SECOND, 7);
+INSERT INTO Ulaz (RBroj, Kamera, RadnoVreme, IDZgrade) VALUES (19, 'Y', INTERVAL '09:00:00' HOUR TO SECOND, 1);
+INSERT INTO Ulaz (RBroj, Kamera, RadnoVreme, IDZgrade) VALUES (20, 'N', INTERVAL '12:15:00' HOUR TO SECOND, 16);
+
+
+Lift:
+
+INSERT INTO Lift (SerijskiBroj, DatPoslServ, DatPoslKvara, UkVanUpotrebe, Proizvodjac, Tip, KapLjudi, Nosivost, IDZgrade) VALUES (1, TO_DATE('2023-05-10', 'YYYY-MM-DD'), TO_DATE('2023-06-20', 'YYYY-MM-DD'), 3, 'Schindler', 'Pasažni', 10, 800, 5);
+INSERT INTO Lift (SerijskiBroj, DatPoslServ, DatPoslKvara, UkVanUpotrebe, Proizvodjac, Tip, KapLjudi, Nosivost, IDZgrade) VALUES (2, TO_DATE('2023-04-15', 'YYYY-MM-DD'), TO_DATE('2023-08-05', 'YYYY-MM-DD'), 7, 'Otis', 'Teretni', 5, 1000, 8);
+INSERT INTO Lift (SerijskiBroj, DatPoslServ, DatPoslKvara, UkVanUpotrebe, Proizvodjac, Tip, KapLjudi, Nosivost, IDZgrade) VALUES (3, TO_DATE('2023-03-20', 'YYYY-MM-DD'), TO_DATE('2023-07-30', 'YYYY-MM-DD'), 5, 'Kone', 'Pasažni', 15, 1200, 2);
+INSERT INTO Lift (SerijskiBroj, DatPoslServ, DatPoslKvara, UkVanUpotrebe, Proizvodjac, Tip, KapLjudi, Nosivost, IDZgrade) VALUES (4, TO_DATE('2023-06-25', 'YYYY-MM-DD'), TO_DATE('2023-09-10', 'YYYY-MM-DD'), 2, 'Mitsubishi', 'Pasažni', 8, 600, 10);
+INSERT INTO Lift (SerijskiBroj, DatPoslServ, DatPoslKvara, UkVanUpotrebe, Proizvodjac, Tip, KapLjudi, Nosivost, IDZgrade) VALUES (5, TO_DATE('2023-04-30', 'YYYY-MM-DD'), TO_DATE('2023-06-15', 'YYYY-MM-DD'), 4, 'ThyssenKrupp', 'Pasažni', 12, 1000, 17);
+INSERT INTO Lift (SerijskiBroj, DatPoslServ, DatPoslKvara, UkVanUpotrebe, Proizvodjac, Tip, KapLjudi, Nosivost, IDZgrade) VALUES (6, TO_DATE('2023-03-05', 'YYYY-MM-DD'), TO_DATE('2023-05-20', 'YYYY-MM-DD'), 6, 'Fujitec', 'Pasažni', 10, 800, 11);
+INSERT INTO Lift (SerijskiBroj, DatPoslServ, DatPoslKvara, UkVanUpotrebe, Proizvodjac, Tip, KapLjudi, Nosivost, IDZgrade) VALUES (7, TO_DATE('2023-05-10', 'YYYY-MM-DD'), TO_DATE('2023-07-25', 'YYYY-MM-DD'), 3, 'Otis', 'Pasažni', 16, 1200, 14);
+INSERT INTO Lift (SerijskiBroj, DatPoslServ, DatPoslKvara, UkVanUpotrebe, Proizvodjac, Tip, KapLjudi, Nosivost, IDZgrade) VALUES (8, TO_DATE('2023-04-15', 'YYYY-MM-DD'), TO_DATE('2023-06-30', 'YYYY-MM-DD'), 5, 'Schindler', 'Teretni', 6, 1500, 19);
+INSERT INTO Lift (SerijskiBroj, DatPoslServ, DatPoslKvara, UkVanUpotrebe, Proizvodjac, Tip, KapLjudi, Nosivost, IDZgrade) VALUES (9, TO_DATE('2023-03-20', 'YYYY-MM-DD'), TO_DATE('2023-08-05', 'YYYY-MM-DD'), 7, 'Kone', 'Pasažni', 20, 1600, 4);
+INSERT INTO Lift (SerijskiBroj, DatPoslServ, DatPoslKvara, UkVanUpotrebe, Proizvodjac, Tip, KapLjudi, Nosivost, IDZgrade) VALUES (10, TO_DATE('2023-06-25', 'YYYY-MM-DD'), TO_DATE('2023-09-10', 'YYYY-MM-DD'), 2, 'Mitsubishi', 'Pasažni', 8, 600, 9);
+INSERT INTO Lift (SerijskiBroj, DatPoslServ, DatPoslKvara, UkVanUpotrebe, Proizvodjac, Tip, KapLjudi, Nosivost, IDZgrade) VALUES (11, TO_DATE('2023-04-30', 'YYYY-MM-DD'), TO_DATE('2023-06-15', 'YYYY-MM-DD'), 4, 'ThyssenKrupp', 'Pasažni', 12, 1000, 6);
+INSERT INTO Lift (SerijskiBroj, DatPoslServ, DatPoslKvara, UkVanUpotrebe, Proizvodjac, Tip, KapLjudi, Nosivost, IDZgrade) VALUES (12, TO_DATE('2023-03-05', 'YYYY-MM-DD'), TO_DATE('2023-05-20', 'YYYY-MM-DD'), 6, 'Fujitec', 'Pasažni', 10, 800, 1);
+INSERT INTO Lift (SerijskiBroj, DatPoslServ, DatPoslKvara, UkVanUpotrebe, Proizvodjac, Tip, KapLjudi, Nosivost, IDZgrade) VALUES (13, TO_DATE('2023-05-10', 'YYYY-MM-DD'), TO_DATE('2023-07-25', 'YYYY-MM-DD'), 3, 'Otis', 'Pasažni', 16, 1200, 16);
+INSERT INTO Lift (SerijskiBroj, DatPoslServ, DatPoslKvara, UkVanUpotrebe, Proizvodjac, Tip, KapLjudi, Nosivost, IDZgrade) VALUES (14, TO_DATE('2023-04-15', 'YYYY-MM-DD'), TO_DATE('2023-06-30', 'YYYY-MM-DD'), 5, 'Schindler', 'Teretni', 6, 1500, 3);
+INSERT INTO Lift (SerijskiBroj, DatPoslServ, DatPoslKvara, UkVanUpotrebe, Proizvodjac, Tip, KapLjudi, Nosivost, IDZgrade) VALUES (15, TO_DATE('2023-03-20', 'YYYY-MM-DD'), TO_DATE('2023-08-05', 'YYYY-MM-DD'), 7, 'Kone', 'Pasažni', 20, 1600, 18);
+INSERT INTO Lift (SerijskiBroj, DatPoslServ, DatPoslKvara, UkVanUpotrebe, Proizvodjac, Tip, KapLjudi, Nosivost, IDZgrade) VALUES (16, TO_DATE('2023-06-25', 'YYYY-MM-DD'), TO_DATE('2023-09-10', 'YYYY-MM-DD'), 2, 'Mitsubishi', 'Pasažni', 8, 600, 13);
+INSERT INTO Lift (SerijskiBroj, DatPoslServ, DatPoslKvara, UkVanUpotrebe, Proizvodjac, Tip, KapLjudi, Nosivost, IDZgrade) VALUES (17, TO_DATE('2023-04-30', 'YYYY-MM-DD'), TO_DATE('2023-06-15', 'YYYY-MM-DD'), 4, 'ThyssenKrupp', 'Pasažni', 12, 1000, 12);
+INSERT INTO Lift (SerijskiBroj, DatPoslServ, DatPoslKvara, UkVanUpotrebe, Proizvodjac, Tip, KapLjudi, Nosivost, IDZgrade) VALUES (18, TO_DATE('2023-03-05', 'YYYY-MM-DD'), TO_DATE('2023-05-20', 'YYYY-MM-DD'), 6, 'Fujitec', 'Pasažni', 10, 800, 7);
+INSERT INTO Lift (SerijskiBroj, DatPoslServ, DatPoslKvara, UkVanUpotrebe, Proizvodjac, Tip, KapLjudi, Nosivost, IDZgrade) VALUES (19, TO_DATE('2023-05-10', 'YYYY-MM-DD'), TO_DATE('2023-07-25', 'YYYY-MM-DD'), 3, 'Otis', 'Pasažni', 16, 1200, 2);
+INSERT INTO Lift (SerijskiBroj, DatPoslServ, DatPoslKvara, UkVanUpotrebe, Proizvodjac, Tip, KapLjudi, Nosivost, IDZgrade) VALUES (20, TO_DATE('2023-04-15', 'YYYY-MM-DD'), TO_DATE('2023-06-30', 'YYYY-MM-DD'), 5, 'Schindler', 'Teretni', 6, 1500, 15);
+
+
+SkupstinaStanara:
+
+INSERT INTO SkupstinaStanara (IDZgrade)
+SELECT ID
+FROM Zgrada;
+
+Sprat:
+
+DECLARE
+    broj_spratova NUMBER;
+    id_zgrade NUMBER;
+BEGIN
+    FOR zgrada_rec IN (SELECT ID FROM Zgrada) LOOP
+        broj_spratova := ROUND(DBMS_RANDOM.VALUE(10, 15));
+        id_zgrade := zgrada_rec.ID;
+        
+        FOR i IN 1..broj_spratova LOOP
+            INSERT INTO Sprat (RBroj, IDZgrade) VALUES (i, id_zgrade); 
+        END LOOP;
+        
+        COMMIT;
+    END LOOP;
+END;
+
+Prostor:
+
+DECLARE
+    broj_prostora NUMBER;
+    tip_prostora VARCHAR2(50);
+BEGIN
+    FOR zgrada_rec IN (SELECT ID FROM Zgrada) LOOP
+        FOR sprat_rec IN (SELECT RBroj FROM Sprat WHERE IDZgrade = zgrada_rec.ID) LOOP
+            broj_prostora := ROUND(DBMS_RANDOM.VALUE(5, 10));
+            FOR i IN 1..broj_prostora LOOP
+                CASE ROUND(DBMS_RANDOM.VALUE(1, 3))
+                    WHEN 1 THEN tip_prostora := 'stan';
+                    WHEN 2 THEN tip_prostora := 'lokal';
+                    ELSE tip_prostora := 'parking';
+                END CASE;
+                INSERT INTO Prostor (RBroj, RBrojSprata, IDZgrade, Tip) VALUES (i, sprat_rec.RBroj, zgrada_rec.ID, tip_prostora);
+            END LOOP;
+        END LOOP;
+    END LOOP;
+    COMMIT;
+END;
+
+Parking:
+
+DECLARE
+    reg_vozila VARCHAR2(50);
+BEGIN
+    FOR prostor_rec IN (SELECT * FROM Prostor WHERE Tip = 'parking') LOOP
+        reg_vozila := SUBSTR('ABCDEFGHIJKLMNOPQRSTUVWXYZ', ROUND(DBMS_RANDOM.VALUE(1, 26)), 1) ||
+                      SUBSTR('ABCDEFGHIJKLMNOPQRSTUVWXYZ', ROUND(DBMS_RANDOM.VALUE(1, 26)), 1) ||
+                      SUBSTR('0123456789', ROUND(DBMS_RANDOM.VALUE(1, 10)), 1) ||
+                      SUBSTR('0123456789', ROUND(DBMS_RANDOM.VALUE(1, 10)), 1) ||
+                      SUBSTR('0123456789', ROUND(DBMS_RANDOM.VALUE(1, 10)), 1) ||
+                      SUBSTR('ABCDEFGHIJKLMNOPQRSTUVWXYZ', ROUND(DBMS_RANDOM.VALUE(1, 26)), 1) ||
+                      SUBSTR('ABCDEFGHIJKLMNOPQRSTUVWXYZ', ROUND(DBMS_RANDOM.VALUE(1, 26)), 1);
+        INSERT INTO Parking (RBroj, RBrojSprata, IDZgrade, RegVozila)
+        VALUES (prostor_rec.RBroj, prostor_rec.RBrojSprata, prostor_rec.IDZgrade, reg_vozila);
+    END LOOP;
+    COMMIT;
+END;
+
+Lokal:
+
+DECLARE
+    ime_lokala VARCHAR2(50);
+BEGIN
+    FOR prostor_rec IN (SELECT * FROM Prostor WHERE Tip = 'parking') LOOP
+         CASE ROUND(DBMS_RANDOM.VALUE(1, 10))
+            WHEN 1 THEN ime_lokala := 'Kafić šoljica sreće';
+            WHEN 2 THEN ime_lokala := 'Restoran ukusni zalogaji';
+            WHEN 3 THEN ime_lokala := 'Knjižara Knjižica';
+            WHEN 4 THEN ime_lokala := 'Frizerski salon šišanje u trendu';
+            WHEN 5 THEN ime_lokala := 'Market brzinska kupovina';
+            WHEN 6 THEN ime_lokala := 'Butik modni kutak';
+            WHEN 7 THEN ime_lokala := 'Pekara mirisni hleb';
+            WHEN 8 THEN ime_lokala := 'Fitnes centar zdravo telo';
+            WHEN 9 THEN ime_lokala := 'Apoteka zdravlje u malim pakovanjima';
+            WHEN 10 THEN ime_lokala := 'Cafe uzdrživa kafa';
+        END CASE;
+        INSERT INTO Lokal (RBroj, RBrojSprata, IDZgrade, ImeFirme)
+        VALUES (prostor_rec.RBroj, prostor_rec.RBrojSprata, prostor_rec.IDZgrade, ime_lokala);
+    END LOOP;
+    COMMIT;
+END;
+
+Osoba:
+
+INSERT INTO Osoba (JMBG, Adresa, LIme, ImeRoditelja, Prezime, Tip) VALUES ('0101999750012', 'Neka ulica 123', 'Marko', 'Milan', 'Marković', 'vlasnik');
+INSERT INTO Osoba (JMBG, Adresa, LIme, ImeRoditelja, Prezime, Tip) VALUES ('0202999850023', 'Druga ulica 456', 'Ana', 'Ivan', 'Ivanović', 'zaposleni');
+INSERT INTO Osoba (JMBG, Adresa, LIme, ImeRoditelja, Prezime, Tip) VALUES ('0303999950034', 'Treća ulica 789', 'Petar', 'Nikola', 'Nikolić', 'vlasnik');
+INSERT INTO Osoba (JMBG, Adresa, LIme, ImeRoditelja, Prezime, Tip) VALUES ('0404999050045', 'Četvrta ulica 1011', 'Jovana', 'Aleksandar', 'Aleksić', 'zaposleni');
+INSERT INTO Osoba (JMBG, Adresa, LIme, ImeRoditelja, Prezime, Tip) VALUES ('0505999150056', 'Peta ulica 1213', 'Nikola', 'Stefan', 'Stefanović', 'vlasnik');
+INSERT INTO Osoba (JMBG, Adresa, LIme, ImeRoditelja, Prezime, Tip) VALUES ('0606999250067', 'Šesta ulica 1415', 'Mila', 'Pavle', 'Pavlović', 'zaposleni');
+INSERT INTO Osoba (JMBG, Adresa, LIme, ImeRoditelja, Prezime, Tip) VALUES ('0707999350078', 'Sedma ulica 1617', 'Luka', 'Dragan', 'Dragić', 'vlasnik');
+INSERT INTO Osoba (JMBG, Adresa, LIme, ImeRoditelja, Prezime, Tip) VALUES ('0808999450089', 'Osma ulica 1819', 'Jelena', 'Nenad', 'Nenadić', 'zaposleni');
+INSERT INTO Osoba (JMBG, Adresa, LIme, ImeRoditelja, Prezime, Tip) VALUES ('0909999550090', 'Deveta ulica 2021', 'Stefan', 'Miroslav', 'Miroslavić', 'vlasnik');
+INSERT INTO Osoba (JMBG, Adresa, LIme, ImeRoditelja, Prezime, Tip) VALUES ('1010999650101', 'Deseta ulica 2223', 'Sara', 'Ilija', 'Ilić', 'zaposleni');
+INSERT INTO Osoba (JMBG, Adresa, LIme, ImeRoditelja, Prezime, Tip) VALUES ('1111999750112', 'Jedanaesta ulica 2425', 'Milica', 'Vladimir', 'Vladimirović', 'vlasnik');
+INSERT INTO Osoba (JMBG, Adresa, LIme, ImeRoditelja, Prezime, Tip) VALUES ('1212999850123', 'Dvanaesta ulica 2627', 'Nemanja', 'Dejan', 'Dejanović', 'zaposleni');
+INSERT INTO Osoba (JMBG, Adresa, LIme, ImeRoditelja, Prezime, Tip) VALUES ('1313999950134', 'Trinaesta ulica 2829', 'Jovanka', 'Lazar', 'Lazarević', 'vlasnik');
+INSERT INTO Osoba (JMBG, Adresa, LIme, ImeRoditelja, Prezime, Tip) VALUES ('1414999050145', 'Četrnaesta ulica 3031', 'Nina', 'Bojan', 'Bojanić', 'zaposleni');
+INSERT INTO Osoba (JMBG, Adresa, LIme, ImeRoditelja, Prezime, Tip) VALUES ('1515999150156', 'Petnaesta ulica 3233', 'Ivan', 'Dušan', 'Dušanić', 'vlasnik');
+INSERT INTO Osoba (JMBG, Adresa, LIme, ImeRoditelja, Prezime, Tip) VALUES ('1616999250167', 'Šesnaesta ulica 3435', 'Marija', 'Stojan', 'Stojanović', 'zaposleni');
+INSERT INTO Osoba (JMBG, Adresa, LIme, ImeRoditelja, Prezime, Tip) VALUES ('1717999350178', 'Sedamnaesta ulica 3637', 'Đorđe', 'Đorđe', 'Đorđević', 'vlasnik');
+INSERT INTO Osoba (JMBG, Adresa, LIme, ImeRoditelja, Prezime, Tip) VALUES ('1818999450189', 'Osamnaesta ulica 3839', 'Jasmina', 'Petar', 'Petković', 'zaposleni');
+INSERT INTO Osoba (JMBG, Adresa, LIme, ImeRoditelja, Prezime, Tip) VALUES ('1919999550190', 'Devetnaesta ulica 4041', 'Aleksa', 'Nikola', 'Nikolić', 'vlasnik');
+
+Zaposleni:
+
+DECLARE
+    v_MestoIzdLK VARCHAR2(100);
+    v_TipPosla VARCHAR2(100);
+BEGIN
+    FOR osoba IN (SELECT JMBG
+                        ,TO_DATE(TRUNC(DBMS_RANDOM.VALUE(TO_CHAR(TO_DATE('1950-01-01', 'YYYY-MM-DD'), 'J'),
+                                                       TO_CHAR(TO_DATE('2000-01-01', 'YYYY-MM-DD'), 'J'))),
+                               'J') AS DatRodjenja
+                        ,LPAD(TRUNC(DBMS_RANDOM.VALUE(100000000, 999999999)), 9, '0') AS BrLicneKarte
+                 FROM Osoba
+                 WHERE Tip = 'zaposleni')
+    LOOP
+        CASE ROUND(DBMS_RANDOM.VALUE(1, 10))
+            WHEN 1 THEN v_MestoIzdLK := 'Beograd';
+            WHEN 2 THEN v_MestoIzdLK := 'Novi Sad';
+            WHEN 3 THEN v_MestoIzdLK := 'Niš';
+            WHEN 4 THEN v_MestoIzdLK := 'Kragujevac';
+            WHEN 5 THEN v_MestoIzdLK := 'Subotica';
+            WHEN 6 THEN v_MestoIzdLK := 'Zrenjanin';
+            WHEN 7 THEN v_MestoIzdLK := 'Čačak';
+            WHEN 8 THEN v_MestoIzdLK := 'Kraljevo';
+            WHEN 9 THEN v_MestoIzdLK := 'Užice';
+            WHEN 10 THEN v_MestoIzdLK := 'Pančevo';
+        END CASE;
+        
+        CASE ROUND(DBMS_RANDOM.VALUE(1, 6))
+            WHEN 1 THEN v_TipPosla := 'Administrator';
+            WHEN 2 THEN v_TipPosla := 'Menadžer';
+            WHEN 3 THEN v_TipPosla := 'Računovođa';
+            WHEN 4 THEN v_TipPosla := 'Inženjer';
+            WHEN 5 THEN v_TipPosla := 'Tehničar';
+            WHEN 6 THEN v_TipPosla := 'Advokat';
+        END CASE;
+        
+        INSERT INTO Zaposleni (JMBG, DatRodjenja, BrLicneKarte, MestoIzdLK, TipPosla)
+        VALUES (osoba.JMBG, osoba.DatRodjenja, osoba.BrLicneKarte, v_MestoIzdLK, v_TipPosla);
+    END LOOP;
+END;
+
+Vlasnik:
+
+DECLARE
+    funkcija VARCHAR2(100);
+    idZgrade NUMBER;
+BEGIN
+    FOR osoba IN (SELECT JMBG FROM Osoba WHERE Tip = 'vlasnik')
+    LOOP
+        funkcija := CASE ROUND(DBMS_RANDOM.VALUE(1, 4))
+                         WHEN 1 THEN 'Predsednik'
+                         WHEN 2 THEN 'Član'
+                         WHEN 3 THEN 'Blagajnik'
+                         WHEN 4 THEN 'Sekretar'
+                      END;
+        idZgrade := ROUND (DBMS_RANDOM.VALUE (1, 20));
+        
+        INSERT INTO Vlasnik (JMBG, IDZgrade, Funkcija)
+        VALUES (osoba.JMBG, idZgrade, funkcija);
+    END LOOP;
+END;
+
+Stan:
+
+DECLARE
+    rBrojStana NUMBER;
+    rBrojSprata NUMBER;
+BEGIN
+    FOR vlasnik IN (SELECT JMBG, IDZgrade FROM Vlasnik) LOOP
+        FOR i IN 1..2 LOOP
+            rBrojSprata := TRUNC(DBMS_RANDOM.VALUE(1, 10));
+            
+            SELECT COALESCE(MAX(RBroj), 0) + 1 INTO rBrojStana FROM Stan WHERE RBrojSprata = rBrojSprata AND IDZgrade = idZgrade;
+            
+            INSERT INTO Stan (RBroj, RBrojSprata, IDZgrade, JMBGVlasnika)
+            VALUES (rBrojStana, rBrojSprata, vlasnik.IDZgrade, vlasnik.JMBG);
+        END LOOP;
+    END LOOP;
+END;
+
+Obrazovanje:
+
+DECLARE
+    zvanje VARCHAR2(50);
+    datSticanja DATE;
+    nazivInstitucije VARCHAR2(100);
+BEGIN
+    FOR zaposleni IN (SELECT JMBG FROM Zaposleni WHERE TipPosla = 'upravnik') LOOP
+        zvanje := CASE ROUND(DBMS_RANDOM.VALUE(1, 3))
+                        WHEN 1 THEN 'Bachelor'
+                        WHEN 2 THEN 'Master'
+                        WHEN 3 THEN 'Doktor'
+                    END;
+        datSticanja := TRUNC(SYSDATE - DBMS_RANDOM.VALUE(365, 3650));
+        nazivInstitucije := CASE ROUND(DBMS_RANDOM.VALUE(1, 3))
+                                    WHEN 1 THEN 'Univerzitet u Beogradu'
+                                    WHEN 2 THEN 'Univerzitet u Novom Sadu'
+                                    WHEN 3 THEN 'Univerzitet u Nišu'
+                                END;
+
+        INSERT INTO Obrazovanje (JMBGUpravnika, Zvanje, DatSticanja, NazivInstitucije)
+        VALUES (zaposleni.JMBG, zvanje, datSticanja, nazivInstitucije);
+    END LOOP;
+END;
+
+Licenca:
+
+DECLARE
+    brLicence NUMBER;
+    izdavac VARCHAR2(100);
+BEGIN
+    FOR upravnik IN (SELECT JMBG FROM Zaposleni WHERE TipPosla = 'upravnik') LOOP
+        brLicence := TRUNC(DBMS_RANDOM.VALUE(1000, 9999));
+
+        izdavac := CASE ROUND(DBMS_RANDOM.VALUE(1, 3))
+                      WHEN 1 THEN 'Zajednica Stanara'
+                      WHEN 2 THEN 'Upravljačka Kompanija d.o.o.'
+                      WHEN 3 THEN 'Agencija za Upravljanje Nekretninama'
+                  END;
+        INSERT INTO Licenca (JMBGUpravnika, BrLicence, Izdavac, DatumSticanja)
+        VALUES (upravnik.JMBG, brLicence, izdavac, SYSDATE);
+    END LOOP;
+END;
+
+Angazovanje:
+
+INSERT INTO Angazovanje (IDZgrade, JMBGUpravnika)
+SELECT ID, JMBG
+FROM (
+    SELECT z.ID, zp.JMBG,
+           ROW_NUMBER() OVER (PARTITION BY z.ID ORDER BY DBMS_RANDOM.VALUE) AS rn
+    FROM Zgrada z
+    CROSS JOIN Zaposleni zp
+    WHERE zp.TipPosla = 'upravnik'
+) numbered
+WHERE rn = 1;
+
+ImeStanara:
+
+DECLARE
+    ime VARCHAR2(100);
+    postoji NUMBER;
+BEGIN
+    FOR s IN (SELECT RBroj, RBrojSprata, IDZgrade, JMBGVlasnika FROM Stan) LOOP
+        FOR i IN 1..ROUND(DBMS_RANDOM.VALUE(2, 5)) LOOP    
+            ime := CASE ROUND(DBMS_RANDOM.VALUE(1, 10))
+                                WHEN 1 THEN 'Marko'
+                                WHEN 2 THEN 'Nikola'
+                                WHEN 3 THEN 'Stefan'
+                                WHEN 4 THEN 'Ivan'
+                                WHEN 5 THEN 'Milan'
+                                WHEN 6 THEN 'Ana'
+                                WHEN 7 THEN 'Jovana'
+                                WHEN 8 THEN 'Milica'
+                                WHEN 9 THEN 'Marija'
+                                WHEN 10 THEN 'Ivana'
+                            END;
+        
+             SELECT COUNT(*) INTO postoji
+            FROM ImeStanara
+            WHERE RBrojStana = s.RBroj
+                AND RBrojSprata = s.RBrojSprata
+                AND IDZgrade = s.IDZgrade
+                AND JMBGVlasnika = s.JMBGVlasnika
+                AND Ime = ime;
+
+            IF postoji = 0 THEN
+                INSERT INTO ImeStanara (RBrojStana, RBrojSprata, IDZgrade, JMBGVlasnika, Ime)
+                VALUES (s.RBroj, s.RBrojSprata, s.IDZgrade, s.JMBGVlasnika, ime);
+            END IF;
+        END LOOP;
+    END LOOP;
+END;
+
+Telefon:
+
+DECLARE
+    broj_telefona VARCHAR2(20);
+BEGIN
+    FOR osoba IN (SELECT JMBG FROM Osoba) LOOP
+        FOR i IN 1..DBMS_RANDOM.VALUE(1, 3) LOOP
+            broj_telefona := '06';
+
+            FOR j IN 1..8 LOOP
+                broj_telefona := broj_telefona || TRUNC(DBMS_RANDOM.VALUE(0, 9));
+            END LOOP;
+
+            INSERT INTO Telefon (JMBGOsobe, Broj)
+            VALUES (osoba.JMBG, broj_telefona);
+        END LOOP;
+    END LOOP;
+END;

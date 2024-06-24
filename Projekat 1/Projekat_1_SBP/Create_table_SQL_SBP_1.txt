@@ -1,0 +1,212 @@
+Zgrada:
+
+CREATE TABLE Zgrada (
+    ID NUMBER,
+    Adresa VARCHAR2(100),
+    CONSTRAINT Zgrada_pk PRIMARY KEY (ID)
+);
+
+Ugovor:
+
+CREATE TABLE Ugovor (
+	Sifra NUMBER,
+	DatPotpisa DATE,
+	PeriodVazenja NUMBER CHECK (PeriodVazenja IN (1, 2, 3)),
+	IDZgrade NUMBER,
+	CONSTRAINT Ugovor_pk PRIMARY KEY (Sifra),
+	CONSTRAINT Ugovor_Zgrada_fk FOREIGN KEY (IDZgrade) REFERENCES Zgrada(ID)
+);
+
+Ulaz:
+
+CREATE TABLE Ulaz (
+	RBroj NUMBER,
+	Kamera CHAR(1) CHECK (Kamera IN ('Y', 'N')),
+	RadnoVreme INTERVAL DAY TO SECOND,
+	IDZgrade NUMBER,
+	CONSTRAINT Ulaz_pk PRIMARY KEY (RBroj),
+	CONSTRAINT Ulaz_Zgrada_fk FOREIGN KEY (IDZgrade) REFERENCES Zgrada(ID)
+);
+
+Lift:
+
+CREATE TABLE Lift (
+	SerijskiBroj NUMBER,
+	DatPoslServ DATE,
+	DatPoslKvara DATE,
+	UkVanUpotrebe NUMBER,
+	Proizvodjac VARCHAR2(100),
+	Tip VARCHAR2(50),
+	KapLjudi NUMBER,
+	Nosivost NUMBER,
+	IDZgrade NUMBER,
+	CONSTRAINT Lift_pk PRIMARY KEY (SerijskiBroj),
+	CONSTRAINT Lift_Zgrada_fk FOREIGN KEY (IDZgrade) REFERENCES Zgrada(ID)
+);
+
+Skupština stanara:
+
+CREATE TABLE SkupstinaStanara (
+	IDZgrade NUMBER,
+	CONSTRAINT SkupstinaStanara_pk PRIMARY KEY (IDZgrade),
+	CONSTRAINT SkupstinaStanara_Zgrada_fk FOREIGN KEY (IDZgrade) REFERENCES Zgrada(ID)
+);
+
+Sprat:
+
+CREATE TABLE Sprat (
+    RBroj NUMBER,
+    IDZgrade NUMBER,
+    CONSTRAINT Sprat_pk PRIMARY KEY (RBroj, IDZgrade),
+    CONSTRAINT Sprat_Zgrada_fk FOREIGN KEY (IDZgrade) REFERENCES Zgrada(ID)
+);
+
+Prostor:
+
+CREATE TABLE Prostor (
+    RBroj NUMBER,
+    RBrojSprata NUMBER,
+    IDZgrade NUMBER,
+    Tip VARCHAR2(50),
+    CONSTRAINT Prostor_pk PRIMARY KEY (RBroj, RBrojSprata, IDZgrade),
+    CONSTRAINT Prostor_Sprat_fk FOREIGN KEY (RBrojSprata, IDZgrade) REFERENCES Sprat(RBroj, IDZgrade),
+    CONSTRAINT chk_TipProstora CHECK (Tip IN ('parking', 'lokal', 'stan'))
+);
+
+Parking: 
+
+CREATE TABLE Parking (
+    RBroj NUMBER,
+    RBrojSprata NUMBER,
+    IDZgrade NUMBER,
+    RegVozila VARCHAR2(50),
+    CONSTRAINT Parking_pk PRIMARY KEY (RBroj, RBrojSprata, IDZgrade),
+    CONSTRAINT Parking_Sprat_fk FOREIGN KEY (RBrojSprata, IDZgrade) REFERENCES Sprat(RBroj, IDZgrade),
+    CONSTRAINT Parking_Zgrada_fk FOREIGN KEY (IDZgrade) REFERENCES Zgrada(ID)
+);
+
+Lokal:
+
+CREATE TABLE Lokal (
+    RBroj NUMBER,
+    RBrojSprata NUMBER,
+    IDZgrade NUMBER,
+    ImeFirme VARCHAR2(50),
+    CONSTRAINT Lokal_pk PRIMARY KEY (RBroj, RBrojSprata, IDZgrade),
+    CONSTRAINT Lokal_Sprat_fk FOREIGN KEY (RBrojSprata, IDZgrade) REFERENCES Sprat(RBroj, IDZgrade),
+    CONSTRAINT Lokal_Zgrada_fk FOREIGN KEY (IDZgrade) REFERENCES Zgrada(ID)
+);
+
+Osoba:
+
+CREATE TABLE Osoba (
+    JMBG VARCHAR2(13),
+    Adresa VARCHAR2(100),
+    LIme VARCHAR2(50),
+    ImeRoditelja VARCHAR2(50),
+    Prezime VARCHAR2(50),
+    Tip VARCHAR2(50),
+    CONSTRAINT Osoba_pk PRIMARY KEY (JMBG),
+    CONSTRAINT chk_JMBG_cifre CHECK (LENGTH(JMBG) = 13 AND JMBG NOT LIKE '%[^0-9]%'),
+    CONSTRAINT chk_TipOsobe CHECK (Tip IN ('vlasnik', 'zaposleni'))
+);
+
+Zaposleni:
+
+CREATE TABLE Zaposleni (
+    JMBG VARCHAR2(13),
+    DatRodjenja DATE,
+    BrLicneKarte VARCHAR2(9),
+    MestoIzdLK VARCHAR2(100),
+    TipPosla VARCHAR2(100),
+    CONSTRAINT Zaposleni_pk PRIMARY KEY (JMBG),
+    CONSTRAINT chk_Zaposleni_JMBG_cifre CHECK (LENGTH(JMBG) = 13 AND JMBG NOT LIKE '%[^0-9]%'),
+    CONSTRAINT chk_BRLK_cifre CHECK (LENGTH(BrLicneKarte) = 9 AND BrLicneKarte NOT LIKE '%[^0-9]%')
+);
+
+Vlasnik: 
+
+CREATE TABLE Vlasnik (
+    JMBG VARCHAR2(13),
+    IDZgrade NUMBER,
+    Funkcija VARCHAR2(100),
+    CONSTRAINT pk_Vlasnik PRIMARY KEY (JMBG, IDZgrade),
+    CONSTRAINT fk_Vlasnik_Zgrada FOREIGN KEY (IDZgrade) REFERENCES Zgrada(ID),
+    CONSTRAINT chk_Vlasnik_JMBG_cifre CHECK (LENGTH(JMBG) = 13 AND JMBG NOT LIKE '%[^0-9]%')
+);
+
+Stan:
+
+CREATE TABLE Stan (
+    RBroj NUMBER,
+    RBrojSprata NUMBER,
+    IDZgrade NUMBER,
+    JMBGVlasnika VARCHAR2(50),
+    CONSTRAINT Stan_pk PRIMARY KEY (RBroj, RBrojSprata, IDZgrade, JMBGVlasnika),
+    CONSTRAINT Stan_Sprat_fk FOREIGN KEY (RBrojSprata, IDZgrade) REFERENCES Sprat(RBroj, IDZgrade),
+    CONSTRAINT Stan_Zgrada_fk FOREIGN KEY (IDZgrade) REFERENCES Zgrada(ID),
+    CONSTRAINT Stan_Vlasnik_fk FOREIGN KEY (JMBGVlasnika, IDZgrade) REFERENCES Vlasnik(JMBG, IDZgrade),
+    CONSTRAINT chk_Stan_JMBG_cifre CHECK (LENGTH(JMBGVlasnika) = 13 AND JMBGVlasnika NOT LIKE '%[^0-9]%')
+);
+
+Obrazovnanje:
+
+CREATE TABLE Obrazovanje (
+    JMBGUpravnika VARCHAR2(13),
+    Zvanje VARCHAR2(50),
+    DatSticanja DATE,
+    NazivInstitucije VARCHAR2(100),
+    CONSTRAINT pk_Obrazovanje PRIMARY KEY (JMBGUpravnika, Zvanje),
+    CONSTRAINT fk_Obrazovanje_Zaposleni FOREIGN KEY (JMBGUpravnika) REFERENCES Zaposleni(JMBG),
+    CONSTRAINT chk_Obrazovanje_JMBG_cifre CHECK (LENGTH(JMBGUpravnika) = 13 AND JMBGUpravnika NOT LIKE '%[^0-9]%')
+);
+
+Licenca:
+
+CREATE TABLE Licenca (
+    JMBGUpravnika VARCHAR2(13),
+    BrLicence NUMBER,
+    Izdavac VARCHAR2(100),
+    DatumSticanja DATE,
+    CONSTRAINT pk_Licenca PRIMARY KEY (JMBGUpravnika, BrLicence),
+    CONSTRAINT fk_Licenca_Zaposleni FOREIGN KEY (JMBGUpravnika) REFERENCES Zaposleni(JMBG),
+    CONSTRAINT chk_Licenca_JMBG_cifre CHECK (LENGTH(JMBGUpravnika) = 13 AND JMBGUpravnika NOT LIKE '%[^0-9]%')
+);
+
+Angazovanje:
+
+CREATE TABLE Angazovanje (
+    IDZgrade NUMBER,
+    JMBGUpravnika VARCHAR2(13),
+    CONSTRAINT pk_Angazovanje PRIMARY KEY (IDZgrade, JMBGUpravnika),
+    CONSTRAINT fk_Angazovanje_Zgrada FOREIGN KEY (IDZgrade) REFERENCES Zgrada(ID),
+    CONSTRAINT fk_Angazovanje_Zaposleni FOREIGN KEY (JMBGUpravnika) REFERENCES Zaposleni(JMBG),
+    CONSTRAINT chk_Angazovanje_JMBG_cifre CHECK (LENGTH(JMBGUpravnika) = 13 AND JMBGUpravnika NOT LIKE '%[^0-9]%')
+);
+
+ImeStanara:
+
+CREATE TABLE ImeStanara (
+    RBrojStana NUMBER,
+    RBrojSprata NUMBER,
+    IDZgrade NUMBER,
+    JMBGVlasnika VARCHAR2(13),
+    Ime VARCHAR2(100),
+    CONSTRAINT pk_ImeStanara PRIMARY KEY (RBrojStana, RBrojSprata, IDZgrade, JMBGVlasnika, Ime),
+    CONSTRAINT fk_ImeStanara_Stan FOREIGN KEY (RBrojStana, RBrojSprata, IDZgrade, JMBGVlasnika) REFERENCES Stan(RBroj, RBrojSprata, IDZgrade, JMBGVlasnika),
+    CONSTRAINT fk_ImeStanara_Sprat FOREIGN KEY (RBrojSprata, IDZgrade) REFERENCES Sprat (RBroj, IDZgrade),
+    CONSTRAINT fk_ImeStanara_Vlasnik FOREIGN KEY (JMBGVlasnika, IDZgrade) REFERENCES Vlasnik(JMBG, IDZgrade),
+    CONSTRAINT fk_ImeStanara_Zgrada FOREIGN KEY (IDZgrade) REFERENCES Zgrada (ID),
+    CONSTRAINT chk_ImeStanara_JMBG_cifre CHECK (LENGTH(JMBGOsobe) = 13 AND JMBGOsobe NOT LIKE '%[^0-9]%')
+);
+
+
+Telefon:
+
+CREATE TABLE Telefon (
+JMBGOsobe VARCHAR2(13),
+Broj VARCHAR2(20),
+CONSTRAINT pk_Telefon PRIMARY KEY (JMBGOsobe, Broj),
+CONSTRAINT fk_Telefon_Osoba FOREIGN KEY (JMBGOsobe) REFERENCES Osoba(JMBG),
+CONSTRAINT chk_Telefon_JMBG_cifre CHECK (LENGTH(JMBGOsobe) = 13 AND JMBGOsobe NOT LIKE '%[^0-9]%') 
+);

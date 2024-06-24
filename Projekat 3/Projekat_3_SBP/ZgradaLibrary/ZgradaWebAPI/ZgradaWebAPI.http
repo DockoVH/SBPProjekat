@@ -1,0 +1,739 @@
+@ZgradaWebAPI_HostAddress = http://localhost:7019
+
+GET {{ZgradaWebAPI_HostAddress}}/Zgrada/PreuzmiSveZgrade
+
+###
+
+GET {{ZgradaWebAPI_HostAddress}}/Zgrada/PreuzmiZgradu/1
+
+###
+
+POST {{ZgradaWebAPI_HostAddress}}/DodajZgradu
+Content-Type: application/json
+
+{
+  "adresa": "string",
+  "upravnici": []
+  "ugovori": [],
+  "ulazi": [],
+  "liftovi": [],
+  "spratovi": [],
+  "prostori": [],
+  "vlasniciStanova": []
+}
+
+###
+
+PUT {{ZgradaWebAPI_HostAddress}}/Zgrada/AzurirajZgradu
+Content-Type: application/json
+
+{
+  "id": 1,
+  "adresa": "dfghjhg",
+  "upravnici": []
+  "ugovori": [],
+  "ulazi": [],
+  "liftovi": [],
+  "spratovi": [],
+  "prostori": [],
+  "vlasniciStanova": []
+}
+
+###
+
+DELETE {{ZgradaWebAPI_HostAddress}}/Zgrada/ObrisiZgradu/1
+
+###
+
+GET {{ZgradaWebAPI_HostAddress}}/Zgrada/Ulaz/PreuzmiSveUlazeZgrade/2
+
+###
+
+GET {{ZgradaWebAPI_HostAddress}}/Zgrada/Ulaz/PreuzmiUlaz/1
+
+###
+
+POST {{ZgradaWebAPI_HostAddress}}/Zgrada/Ulaz/DodajUlaz
+Content-Type: application/json
+
+{
+  "rBroj": 0,
+  "kamera": "y",
+  "zgrada": {
+    "id": 0,
+  },
+  "pocetakRadnogVremena": "string",
+  "krajRadnogVremena": "string"
+}
+
+###
+
+PUT {{ZgradaWebAPI_HostAddress}}/Zgrada/Ulaz/AzurirajUlaz
+Content-Type: application/json
+
+{
+  "id": 1,
+  "rBroj": 0,
+  "kamera": "n",
+  "zgrada": {
+    "id": 0,
+  },
+  "pocetakRadnogVremena": "00:00",
+  "krajRadnogVremena": "23:59"
+}
+
+###
+
+DELETE {{ZgradaWebAPI_HostAddress}}/Zgrada/Ulaz/ObrisiUlaz/1
+
+###
+
+GET {{ZgradaWebAPI_HostAddress}}/Zgrada/Ugovor/PreuzmiSveUgovore
+
+###
+
+GET {{ZgradaWebAPI_HostAddress}}/Zgrada/Ugovor/PreuzmiSveUgovoreZgrade/2
+
+###
+
+GET {{ZgradaWebAPI_HostAddress}}/Zgrada/Ugovor/PreuzmiUgovor/1
+
+###
+
+POST {{ZgradaWebAPI_HostAddress}}/Zgrada/Ugovor/DodajUgovor
+Content-Type: application/json
+
+{
+  "sifra": 2,
+  "datumPotpisivanja": "2024-06-18T13:08:55.467Z",
+  "periodVazenja": 2,
+  "zgrada": {
+    "id": 0
+  }
+}
+
+###
+
+PUT {{ZgradaWebAPI_HostAddress}}/Zgrada/Ugovor/AzurirajUgovor
+Content-Type: application/json
+
+{
+  "sifra": 2,
+  "datumPotpisivanja": "2024-06-18T13:08:55.467Z",
+  "periodVazenja": 1,
+  "zgrada": {
+    "id": 0
+  }
+}
+
+###
+
+DELETE {{ZgradaWebAPI_HostAddress}}/Zgrada/Ugovor/ObrisiUgovor/2
+
+###
+
+GET {{ZgradaWebAPI_HostAddress}}/Zgrada/Sprat/PreuzmiSveSpratove
+
+###
+
+GET {{ZgradaWebAPI_HostAddress}}/Zgrada/Sprat/PreuzmiSveSpratoveZgrade/1
+
+###
+
+GET {{ZgradaWebAPI_HostAddress}}/Zgrada/Sprat/PreuzmiSprat/1
+
+###
+
+POST {{ZgradaWebAPI_HostAddress}}/Zgrada/Sprat/DodajSprat
+Content-Type: application/json
+
+{
+  "rBroj": 0,
+  "zgrada": {
+    "id": 0
+  },
+  "prostori": []
+}
+
+###
+
+PUT {{ZgradaWebAPI_HostAddress}}/Zgrada/Sprat/AzurirajSprat
+Content-Type: application/json
+
+{
+  "id": 2,
+  "rBroj": 2,
+  "zgrada": {
+    "id": 0
+  },
+  "prostori": []
+}
+
+###
+
+DELETE {{ZgradaWebAPI_HostAddress}}/Zgrada/Sprat/ObrisiSprat/2
+
+###
+
+GET {{ZgradaWebAPI_HostAddress}}/Zgrada/SkupstinaStanara/PreuzmiSveClanoveSkupstine
+
+###
+
+GET {{ZgradaWebAPI_HostAddress}}/Zgrada/SkupstinaStanara/PreuzmiSveClanoveSKupstineZgrade/1
+
+###
+
+GET {{ZgradaWebAPI_HostAddress}}/Zgrada/SkupstinaStanara/PreuzmiClanaSkupstine/1
+
+###
+
+POST {{ZgradaWebAPI_HostAddress}}/Zgrada/SkupstinaStanara/DodajClanaSkupstineStanara
+Content-Type: application/json
+
+{
+  "zgrada": {
+    "id": 0
+  },
+  "vlasnik": {
+    "jmbg": "1234567890101"
+  },
+  "funkcija": "string"
+}
+
+###
+
+PUT {{ZgradaWebAPI_HostAddress}}/Zgrada/SkupstinaStanara/AzurirajClanaSkupstineStanara
+Content-Type: application/json
+
+{
+  "id": 0,
+  "zgrada": {
+    "id": 0
+  },
+  "vlasnik": {
+    "jmbg": "1234567890101"
+  },
+  "funkcija": "asdfghjkjhgfd"
+}
+
+###
+
+DELETE {{ZgradaWebAPI_HostAddress}}/Zgrada/SkupstinaStanara/ObrisiClanaSkupstineStanara/2
+
+###
+
+GET {{ZgradaWebAPI_HostAddress}}/Zgrada/Lift/PreuzmiSveLiftove
+
+###
+
+GET {{ZgradaWebAPI_HostAddress}}/Zgrada/Lift/PreuzmiSveLiftoveZgrade/1
+
+###
+
+GET {{ZgradaWebAPI_HostAddress}}/Zgrada/Lift/PreuzmiSveTeretneLiftoveUZgradi/1
+
+###
+
+GET {{ZgradaWebAPI_HostAddress}}/Zgrada/Lift/PreuzmiSveLiftoveZaLjudeUZgradi/1
+
+###
+
+GET {{ZgradaWebAPI_HostAddress}}/Zgrada/Lift/PreuzmiLift/1
+
+###
+
+POST {{ZgradaWebAPI_HostAddress}}/Zgrada/Lift/DodajLiftTeretni
+Content-Type: application/json
+
+{
+  "datPoslServisa": "2024-06-18T14:41:26.696Z",
+  "datPoslKvara": "2024-06-18T14:41:26.696Z",
+  "ukVanUpotrebe": 0,
+  "tip": "Teretni",
+  "proizvodjac": "string",
+  "zgrada": {
+    "id": 0,
+  }
+  "nosivost": 13
+}
+
+###
+
+POST {{ZgradaWebAPI_HostAddress}}/Zgrada/Lift/DodajLiftZaLjude
+Content-Type: application/json
+
+{
+  "datPoslServisa": "2024-06-18T14:41:26.696Z",
+  "datPoslKvara": "2024-06-18T14:41:26.696Z",
+  "ukVanUpotrebe": 0,
+  "tip": "Za Ljude",
+  "proizvodjac": "string",
+  "zgrada": {
+    "id": 0,
+  }
+  "kapLjudi": 3
+}
+
+###
+
+POST {{ZgradaWebAPI_HostAddress}}/Zgrada/Lift/DodajLiftTeretni
+Content-Type: application/json
+
+{
+  "serijskiBroj": 2,
+  "datPoslServisa": "2024-06-18T14:41:26.696Z",
+  "datPoslKvara": "2024-06-18T14:41:26.696Z",
+  "ukVanUpotrebe": 5,
+  "tip": "Teretni",
+  "proizvodjac": "string",
+  "zgrada": {
+    "id": 0,
+  }
+  "nosivost": 50
+}
+
+###
+
+POST {{ZgradaWebAPI_HostAddress}}/Zgrada/Lift/AzurirajLiftZaLjude
+Content-Type: application/json
+
+{
+  "serijskiBroj": 1,
+  "datPoslServisa": "2024-06-18T14:41:26.696Z",
+  "datPoslKvara": "2024-06-18T14:41:26.696Z",
+  "ukVanUpotrebe": 1,
+  "tip": "Za Ljude",
+  "proizvodjac": "asdfghjkjhgfd",
+  "zgrada": {
+    "id": 0,
+  }
+  "kapLjudi": 15
+}
+
+###
+
+DELETE {{ZgradaWebAPI_HostAddress}}/Zgrada/Lift/ObrisiLift/2
+
+###
+
+GET {{ZgradaWebAPI_HostAddress}}/Zgrada/Angazovanje/PreuzmiSvaAngazovanja
+
+###
+
+GET {{ZgradaWebAPI_HostAddress}}/Zgrada/Angazovanje/PreuzmiSvaAngazovanjaZgrade/1
+
+###
+
+GET {{ZgradaWebAPI_HostAddress}}/Zgrada/Angazovanje/PreuzmiAngazovanje/1/1234567890123
+
+###
+
+POST {{ZgradaWebAPI_HostAddress}}/Zgrada/Angazovanje/DodajAngazovanje/5/4567890123456
+
+###
+
+DELETE {{ZgradaWebAPI_HostAddress}}/Zgrada/Angazovanje/ObrisiAngazovanje/5/4567890123456
+
+###
+
+GET {{ZgradaWebAPI_HostAddress}}/Prostor/PreuzmiSveProstore
+
+###
+
+GET {{ZgradaWebAPI_HostAddress}}/Prostor/Lokal/PreuzmiSveLokaleZgrade/1
+
+###
+
+GET {{ZgradaWebAPI_HostAddress}}/Prostor/Parking/PreuzmiSveParkingeZgrade/1
+
+###
+
+GET {{ZgradaWebAPI_HostAddress}}/Prostor/Parking/PreuzmiSveStanoveZgrade/1
+
+###
+
+GET {{ZgradaWebAPI_HostAddress}}/Prostor/PreuzmiSveProstoreZgrade/1
+
+###
+
+GET {{ZgradaWebAPI_HostAddress}}/Prostor/PreuzmiProstor/1
+
+###
+
+POST {{ZgradaWebAPI_HostAddress}}/Prostor/Lokal/DodajLokal
+Content-Type: application/json
+
+{
+  "rBroj": 0,
+  "sprat": {
+    "id": 0,
+    "rBroj": 0,
+    "zgrada": {
+      "id": 0
+    },
+    "prostori": []
+  },
+  "zgrada": {
+    "id": 0,
+  },
+  "tip": "Lokal",
+  "imeFirme": "string"
+}
+
+###
+
+POST {{ZgradaWebAPI_HostAddress}}/Prostor/Parking/DodajParking
+Content-Type: application/json
+
+{
+  "rBroj": 0,
+  "sprat": {
+    "id": 0,
+    "rBroj": 0,
+    "zgrada": {
+      "id": 0
+    },
+    "prostori": []
+  },
+  "zgrada": {
+    "id": 0,
+  },
+  "tip": "Parking",
+  "regVozila": "string"
+}
+
+###
+
+POST {{ZgradaWebAPI_HostAddress}}/Prostor/Stan/DodajStan
+Content-Type: application/json
+
+{
+  "rBroj": 0,
+  "sprat": {
+    "id": 0,
+    "rBroj": 0,
+    "zgrada": {
+      "id": 0
+    },
+    "prostori": []
+  },
+  "zgrada": {
+    "id": 0,
+  },
+  "tip": "Stan",
+  "vlasnik": {
+    "jmbg": "1234567890123",
+    },
+  "stanari": []
+}
+
+###
+
+PUT {{ZgradaWebAPI_HostAddress}}/Prostor/Lokal/AzurirajLokal
+Content-Type: application/json
+
+{
+  "id": 1,
+  "rBroj": 10,
+  "sprat": {
+    "id": 0,
+    "rBroj": 0,
+    "zgrada": {
+      "id": 0
+    },
+    "prostori": []
+  },
+  "zgrada": {
+    "id": 0,
+  },
+  "tip": "Lokal",
+  "imeFirme": "string"
+}
+
+###
+
+PUT {{ZgradaWebAPI_HostAddress}}/Prostor/Parking/AzurirajParking
+Content-Type: application/json
+
+{
+  "id": 3,
+  "rBroj": 15,
+  "sprat": {
+    "id": 0,
+    "rBroj": 0,
+    "zgrada": {
+      "id": 0
+    },
+    "prostori": []
+  },
+  "zgrada": {
+    "id": 0,
+  },
+  "tip": "Parking",
+  "regVozila": "ghasdh2136123"
+}
+
+###
+
+PUT {{ZgradaWebAPI_HostAddress}}/Prostor/Stan/AzurirajStan
+Content-Type: application/json
+
+{
+  "id": 2,
+  "rBroj": 13,
+  "sprat": {
+    "id": 0,
+    "rBroj": 0,
+    "zgrada": {
+      "id": 0
+    },
+    "prostori": []
+  },
+  "zgrada": {
+    "id": 0,
+  },
+  "tip": "Stan",
+  "vlasnik": {
+    "jmbg": "1234567890123",
+    },
+  "stanari": []
+}
+
+###
+
+DELETE {{ZgradaWebAPI_HostAddress}}/Prostor/ObrisiProstor/2
+
+###
+
+GET {{ZgradaWebAPI_HostAddress}}/Prostor/ImeStanara/PreuzmiSveStanare
+
+###
+
+GET {{ZgradaWebAPI_HostAddress}}/Prostor/ImeStanara/PreuzmiSveStanareZgrade/1
+
+###
+
+GET {{ZgradaWebAPI_HostAddress}}/Prostor/ImeStanara/PreuzmiSveStanareStana/1
+
+###
+
+GET {{ZgradaWebAPI_HostAddress}}/Prostor/ImeStanara/2
+
+###
+
+POST {{ZgradaWebAPI_HostAddress}}/Prostor/ImeStanara/DodajStanara
+Content-Type: application/json
+
+{
+  "stan": {
+    "id": 0
+  },
+  "ime": "string"
+}
+
+###
+
+PUT {{ZgradaWebAPI_HostAddress}}/Prostor/ImeStanara/AzurirajStanara
+Content-Type: application/json
+
+{
+  "id": 1,
+  "stan": {
+    "id": 0
+  },
+  "ime": "jjdhsajkhdjka"
+}
+
+###
+
+DELETE {{ZgradaWebAPI_HostAddress}}/Prostor/ImeStanara/ObrisiStanara/1
+
+###
+
+GET {{ZgradaWebAPI_HostAddress}}/Osoba/PreuzmiSveOsobe
+
+###
+
+GET {{ZgradaWebAPI_HostAddress}}/Osoba/Zaposleni/PreuzmiSveZaposlene
+
+###
+
+GET {{ZgradaWebAPI_HostAddress}}/Osoba/Upravnik/PreuzmiSveUpravnike
+
+###
+
+GET {{ZgradaWebAPI_HostAddress}}/Osoba/Upravnik/PreuzmiSveUpravnikeZgrade/1
+
+###
+
+GET {{ZgradaWebAPI_HostAddress}}/Osoba/Zaposleni/PreuzmiZaposlenog/1234567890123
+
+###
+
+POST {{ZgradaWebAPI_HostAddress}}/Osoba/Zaposleni/DodajZaposlenog
+Content-Type: application/json
+
+{
+  "jmbg": "2468013579246",
+  "adresa": "string",
+  "punoIme": "string (string) string",
+  "brojeviTelefona": [],
+  "datumRodjenja": "2024-06-18T15:07:45.767Z",
+  "brLicneKarte": "1234567",
+  "mestoIzdLK": "string",
+  "tipPosla": "Upravnik",
+  "obrazovanja": [],
+  "licence": [],
+  "zgrade": []
+}
+
+###
+
+PUT {{ZgradaWebAPI_HostAddress}}/Osoba/Zaposleni/AzurirajZaposlenog
+Content-Type: application/json
+
+{
+  "jmbg": "2468013579246",
+  "adresa": "hasdjashdkas",
+  "punoIme": "dkaskdjas (djaskld) kdsaljdl",
+  "brojeviTelefona": [],
+  "datumRodjenja": "2024-06-18T15:07:45.767Z",
+  "brLicneKarte": "1234567",
+  "mestoIzdLK": "asjkldjkas",
+  "tipPosla": "Upravnik",
+  "obrazovanja": [],
+  "licence": [],
+  "zgrade": []
+}
+
+###
+
+DELETE {{ZgradaWebAPI_HostAddress}}/Osoba/Zaposleni/ObrisiZaposlenog/2468013579246
+
+###
+
+GET {{ZgradaWebAPI_HostAddress}}/Osoba/Licenca/PreuzmiSveLicence
+
+###
+
+GET {{ZgradaWebAPI_HostAddress}}/Osoba/Licenca/PreuzmiSveLicenceUpravnika/1234567890123
+
+###
+
+GET {{ZgradaWebAPI_HostAddress}}/Osoba/Licenca/PreuzmiLicencu/1
+
+###
+
+POST {{ZgradaWebAPI_HostAddress}}/Osoba/Licenca/DodajLicencu
+Content-Type: application/json
+
+{
+  "upravnik": {
+    "jmbg": "1234567890123",
+   },
+  "brLicence": 123456,
+  "izdavac": "string",
+  "datumSticanja": "2024-06-18T15:12:38.062Z"
+}
+
+###
+
+PUT {{ZgradaWebAPI_HostAddress}}/Osoba/Licenca/AzurirajLicencu
+Content-Type: application/json
+
+{
+  "id": 1,
+  "upravnik": {
+    "jmbg": "1234567890123",
+   },
+  "brLicence": 123456,
+  "izdavac": "ddfasgdjkhaskdsa",
+  "datumSticanja": "2024-06-18T15:12:38.062Z"
+}
+
+###
+
+DELETE {{ZgradaWebAPI_HostAddress}}/Osoba/Licenca/ObrisiLicencu/1
+
+###
+
+GET {{ZgradaWebAPI_HostAddress}}/Osoba/Obrazovanje/PreuzmiSvaObrazovanja
+
+###
+
+GET {{ZgradaWebAPI_HostAddress}}/Osoba/Obrazovanje/PreuzmiSvaObrazovanjaUpravnika/1234567890123
+
+###
+
+GET {{ZgradaWebAPI_HostAddress}}/Osoba/Obrazovanje/PreuzmiObrazovanje/1
+
+###
+
+POST {{ZgradaWebAPI_HostAddress}}/Osoba/Obrazovanje/DodajObrazovanje
+Content-Type: application/json
+
+{
+  "upravnik": {
+    "jmbg": "1234567890123"
+  },
+  "zvanje": "string",
+  "datumSticanja": "2024-06-18T15:17:25.009Z",
+  "nazivInstitucije": "string"
+}
+
+###
+
+PUT {{ZgradaWebAPI_HostAddress}}/Osoba/Obrazovanje/AzurirajObrazovanje
+Content-Type: application/json
+
+{
+  "id": 1,
+  "upravnik": {
+    "jmbg": "1234567890123"
+  },
+  "zvanje": "dfasgdjasj",
+  "datumSticanja": "2024-06-18T15:17:25.009Z",
+  "nazivInstitucije": "dhkashdsad"
+}
+
+###
+
+DELETE {{ZgradaWebAPI_HostAddress}}/Osoba/Obrazovanje/ObrisiObrazovanje/1
+
+###
+
+GET {{ZgradaWebAPI_HostAddress}}/Osoba/Telefon/PreuzmiSveTelefoneOsobe/1234567890123
+
+###
+
+GET {{ZgradaWebAPI_HostAddress}}/Osoba/Telefon/PreuzmiTelefon/1
+
+###
+
+POST {{ZgradaWebAPI_HostAddress}}/Osoba/Telefon/DodajTelefon
+Content-Type: application/json
+
+{
+  "osoba": {
+    "jmbg": "1234567890123"},
+  "brojTelefona": "123456789"
+}
+
+###
+
+PUT {{ZgradaWebAPI_HostAddress}}/Osoba/Telefon/AzurirajTelefon
+Content-Type: application/json
+
+{
+  "id": 1,
+  "osoba": {
+    "jmbg": "1234567890123"
+  },
+  "brojTelefona": "987654321"
+}
+
+###
+
+DELETE {{ZgradaWebAPI_HostAddress}}/Osoba/Telefon/ObrisiTelefon/1
+
+###

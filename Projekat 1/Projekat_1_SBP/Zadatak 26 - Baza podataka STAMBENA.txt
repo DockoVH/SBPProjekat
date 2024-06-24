@@ -1,0 +1,29 @@
+Zadatak 26 - Baza podataka STAMBENA ZGRADA
+
+Potrebno je projektovati bazu podataka koja čuva podatke za potrebe jedne agencije koja se bavi
+profesionalnim upravljanjem stambenim zgradama. Za sve zaposlene u agenciji se pamti informacija o
+jedinstvenom matičnom broju, imenu, imenu roditelja, prezimenu, datumu rođenja, broju lične karte I
+mestu izdavanja, broj telefona I adresa. U ime agencije zgradama upravljaju profesionalni upravnici. Oni
+su zaposleni u okviru agencije ali zbog specifičnosti posla koji obavljaju za njih se dodatno pamte
+informacije o različitim vidovima obrazovanja koje su stekli (naziv institucije, zvanje I datum sticanja
+diplome). Svaki zaposleni koji obavlja posao upravnika zgrade mora da poseduje licencu koja se periodično
+obnavlja. Potrebno je pamtiti podathe o licenci (datum sticanja/obnavljanja, broj licence i naziv institucije
+koja je licencu izdala. Agencija sa zgradom potpisuje ugovor o pružanju usluga i za svaki ugovor se pamti
+jedinstvena šifra, datum potpisivanja ugovora i period vađenja ugovora (jedna, dve ili najviše tri godine).
+Agencija za stambenu zgradu imenuje profesionalnog upravnika i jedan profesionalni upravnik može da
+bude zadužen za veći broj stambenih zgrada. Stambeni zgrada poseduje veći broj ulaza. Za svaki ulaz se
+pamti redni broj, vremenski period u toku dana kada je ulaz otvoren, da li je instalirana video kamera koja
+vrši monitoring ulaza. Potrebno je pamtiti informacije i o većem broju liftova koji postoje. Za svaki lift se
+pamti jedinstveni serijski broj, naziv proizvođača, datum kada je lift poslednji put servisiran, datum kada
+je lift poslednji put bio u kvaru i koliko dana je ukupno bio van upotrebe. Za teretne liftove se pamti koja
+je nosivost a za liftove koji su namenjeni za prevoz ljudi maksimalan broj osoba koji može da se preveze.
+Pamti se informacija i o svakom spratu (nivou) stambenog kompleksa. U podzemnim nivoima se nalazi
+garažni prostor. Za svako mesto za parkiranje se pamti redni broj i podzemni nivo na kome se nalazi. Neka
+mesta su rezervisana i u tom slučaju se pamti registracioni broj vozila za koje je to mesto rezervisano. Na
+nižim spratovima zgrade se nalazi poslovni prostor. Za svaki lokal se pamti redni broj i sprat na kome se
+nalazi kao i ime firme koja se nalazi u tom lokalu. Na višim spratovima se nalazi stambeni prostor. Za svaki
+stan se pamti njegov redni broj, sprat na kome se nalazi i imena stanara. Pored toga za svaki stan se pamte
+informacije o vlasniku stana (jedinstveni matični broj, ime, ime roditelja, prezime, broj telefona I adresa).
+Svi vlasnici stanova u zgradi su članovi skupštine stanara. Neki od članova skupštine stanara se biraju na
+određene funkcije (predsednik, blagajnik, članovi saveta). U bazi podataka je potrebno pamtiti inforamcije
+i o tome.

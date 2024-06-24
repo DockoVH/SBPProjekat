@@ -1,0 +1,85 @@
+					DataProvider | Controller
+								 |
+Angazovanje				 +		 |		+
+ImeStanara				 +		 |		+
+Licenca					 +		 |		+
+Lift					 +		 |		+
+LiftTeretni				 +		 |		+
+LiftZaLjude				 +		 | 		+
+Lokal					 +		 |		+
+Obrazovanje				 +		 |		+
+Osoba					 +		 |		+
+Parking					 +		 |		+
+Prostor					 +		 | 		+
+SkupstinaStanara		 +		 |		+				
+Sprat					 +		 |		+
+Stan					 +		 |		+
+Telefon					 +		 |		+
+Ugovor					 +		 |		+
+Ulaz					 +		 |		+
+Vlasnik					 +		 |		+
+Zaposleni				 +		 |		+
+Zgrada					 +		 |		+
+
+
+OsobaController + Licenca + Obrazovanje + Telefon
+	/{NestoOdOvaCetri}/Metoda/
+	
+ProstorController -> + ImeStanara
+	/{TipProstoa}/Metoda/
+	
+ZgradaContorller -> + Ulaz + Ugovor + Sprat + SkupstinaStanara? + Lift + Angazovanje
+	/{NestoOdSveOvo}/Metoda/
+	
+{
+  "id": 0,
+  "upravnik": {
+    "jmbg": "string",
+   },
+  "brLicence": 123456,
+  "izdavac": "string",
+  "datumSticanja": "2024-06-18T15:12:38.062Z"
+}
+
+GET {{ZgradaWebAPI_HostAddress}}/Zgrada/Ulaz/PreuzmiSveUlazeZgrade/2
+
+###
+
+GET {{ZgradaWebAPI_HostAddress}}/Zgrada/Ulaz/PreuzmiUlaz/1
+
+###
+
+POST {{ZgradaWebAPI_HostAddress}}/Zgrada/Ulaz/DodajUlaz
+Content-Type: application/json
+
+{
+  "rBroj": 0,
+  "kamera": "y",
+  "zgrada": {
+    "id": 0,
+  },
+  "pocetakRadnogVremena": "string",
+  "krajRadnogVremena": "string"
+}
+
+###
+
+PUT {{ZgradaWebAPI_HostAddress}}/Zgrada/Ulaz/AzurirajUlaz
+Content-Type: application/json
+
+{
+  "id": 1,
+  "rBroj": 0,
+  "kamera": "n",
+  "zgrada": {
+    "id": 0,
+  },
+  "pocetakRadnogVremena": "00:00",
+  "krajRadnogVremena": "23:59"
+}
+
+###
+
+DELETE {{ZgradaWebAPI_HostAddress}}/Zgrada/Ulaz/ObrisiUlaz/1
+
+###

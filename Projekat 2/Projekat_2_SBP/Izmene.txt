@@ -1,0 +1,13 @@
+1. Izbrisan atribut RadnoVreme iz tabele Ulaz i dodati atributi PocetakRadnogVremena i KrajRadnogVremena.
+
+2. Izmenjena tabela SkupstinaStanara.
+
+3. Izmenjen primarni ključ tabele Stan.
+
+4. Izmenjen primarni ključ i kolone tabele Vlasnik.
+
+5. Izmenjen primarni ključ tabele Ulaz.
+
+6. Izmenjen primarni ključ tabele ImeStanara.
+
+7. Izmenjen primarni ključ svih tabela sa kompozitnim ključem, dodata kolona ID koja čini novi primarni ključ.
